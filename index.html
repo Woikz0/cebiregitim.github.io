@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Düzeni</title>
+    <style>
+        /* Genel stil */
+        body {
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Form kutusu */
+        .form-container {
+            text-align: left;
+            /* Form elemanlarını sola hizala */
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            width: 70vw;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Başlık */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Form grup stili */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            appearance: none;
+            /* Dropdown oku gizler (isteğe bağlı) */
+            background-color: white;
+            /* Input ile aynı arka plan rengi */
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 10px;
+        }
+
+        select:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Submit butonu */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js" type="module"></script>
+
+
+</head>
+
+<body>
+    <div class="form-container" id="form">
+        <h1>Bursluluk Kayıt Formu</h1>
+        <form onsubmit="">
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="field1">Öğrenci Ad Soyad</label>
+                <input type="text" id="name-surname" placeholder="İsim Soyisim Giriniz" required>
+            </div>
+
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="field2">Öğrenci Telefon Numarası</label>
+                <input type="text" id="std-no" placeholder="Telefon Numarası Giriniz" required>
+            </div>
+
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="field3">Veli Telefon Numarası</label>
+                <input type="text" id="prt-no" placeholder="Telefon Numarası Giriniz" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Sınav Tarihi Seçiniz</label>
+                <select id="exam-date" required>
+                    <option value="" disabled selected>Bir tarih seçin</option>
+                    <option value="option1">Seçenek 1</option>
+                    <option value="option2">Seçenek 2</option>
+                    <option value="option3">Seçenek 3</option>
+                </select>
+            </div>
+
+            <!-- İkinci alan -->
+            <div class="form-group">
+                <label for="field2">Okuduğunuz Okul</label>
+                <input type="text" id="school-name" placeholder="Okuduğunuz Okulu Giriniz" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Sınıf Düzeyi</label>
+                <select id="grade" required>
+                    <option value="" disabled selected>Sınıf Düzeyi...</option>
+                    <option value="option1">9. Sınıf</option>
+                    <option value="option2">10. Sınıf</option>
+                    <option value="option3">11. Sınıf - Sayısal</option>
+                    <option value="option3">11. Sınıf - Eşit Ağırlık</option>
+                    <option value="option3">12. Sınıf - Sayısal</option>
+                    <option value="option3">12. Sınıf - Eşit Ağırlık</option>
+                </select>
+            </div>
+
+            <!-- Submit butonu -->
+            <button id="submitButton" type="submit">Gönder</button>
+        </form>
+    </div>
+
+
+    <script src="./script.js" type="module"></script>
+    <script src="./forwarding.js" type="module"></script>
+</body>
+
+</html>
