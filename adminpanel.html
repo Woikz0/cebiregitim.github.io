@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cebir Yonetim</title>
     <style>
         /* Genel sıfırlamalar */
         * {
@@ -125,6 +125,23 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        .list-header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        #deleteButton {
+            color: red;
+            background-color: transparent;
+            width: 50px;
+            border-width: 0px;
+        }
+        
+        #deleteButton:hover {
+            background-color: gray;
+        }
+
         .list-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
@@ -193,8 +210,13 @@
 
         <div class="list-container" id="student-list">
             <div class="list-item">
-                <div class="list-title">Liste Başlığı 1</div>
-                <div class="list-date">02.02.2025</div>
+                <div class="list-header">
+                    <div>
+                        <div class="list-title">Liste Başlığı 1</div>
+                        <div class="list-date">02.02.2025</div>
+                    </div>
+                    <button id="deleteButton" type="button">Sil</button>
+                </div>
                 <div class="list-divider"></div>
                 <div class="list-details">
                     <label class="stdlist-item">Detay 1: Birinci detay bilgisi buraya gelir.</label>

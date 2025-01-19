@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursluluk Başvuru</title>
+    <title>Cebir Egitim</title>
     <link rel="stylesheet" href="style.css">
-
     <style>
-        /* General Styles */
+        /* style.css */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
-        nav {
-            background-color: #333;
-            padding: 15px;
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            height: 50px;
         }
 
         nav ul {
-            list-style-type: none;
+            display: flex;
+            list-style: none;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
         }
 
         nav ul li {
@@ -34,97 +39,117 @@
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Burs Başvuru Formu */
-        #burs-basvuru {
-            background-color: white;
-            max-width: 500px;
-            margin: 30px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
             color: #333;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input,
-        textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #4CAF50;
+        .btn {
+            background-color: #007BFF;
             color: white;
-            padding: 10px;
-            border: none;
+            padding: 10px 15px;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
+            text-decoration: none;
         }
 
-        button:hover {
-            background-color: #45a049;
+        .hero {
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #007BFF;
+            margin: 10px 0 0;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-image: url('confetti.png');
+            background-size: cover;
+        }
+
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .achievement {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .main{
+            height: 500px;
+            background-color: #333;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <div class="header-container">
+            <label for="">CEBIR EGITIM</label>
+            <nav>
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Rehberlik</a></li>
+                    <li><a href="#">Şubelerimiz</a></li>
+                    <li><a href="#">Galeri</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html" class="btn">Bursluluk Kayıt Formu</a>
+        </div>
+    </header>
 
-    <!-- Navbar -->
-    <nav>
-        <ul>
-            <li><a href="#">Anasayfa</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Bursluluk Başvuru</a></li>
-            <li><a href="#">İletişim</a></li>
-        </ul>
-    </nav>
+    <main class="main">
 
-    <!-- Bursluluk Başvuru Formu -->
-    <section id="burs-basvuru">
-        <h2>Bursluluk Başvuru Formu</h2>
-        <form action="#" method="POST">
-            <label for="adsoyad">Ad / Soyad:</label>
-            <input type="text" id="adsoyad" name="adsoyad" required>
+    </main>
 
-            <label for="email">E-Posta:</label>
-            <input type="email" id="email" name="email" required>
+    <!-- <main>
+        <section class="hero">
+            <h1>Gurur Tablomuz</h1>
+            <h2>2024 YKS</h2>
+            <div class="confetti"></div>
+        </section>
 
-            <label for="telefon">Telefon:</label>
-            <input type="tel" id="telefon" name="telefon" required>
-
-            <label for="mesaj">Mesaj:</label>
-            <textarea id="mesaj" name="mesaj" required></textarea>
-
-            <button type="submit">Başvuruyu Gönder</button>
-        </form>
-    </section>
-
+        <section class="achievements">
+            <div class="achievement">
+                <p>İkra Nur Malgir</p>
+                <span>ODTÜ</span>
+            </div>
+            <div class="achievement">
+                <p>Zerda Erçen</p>
+                <span>ANKARA</span>
+            </div>
+        </section>
+    </main> -->
 </body>
 
 </html>
