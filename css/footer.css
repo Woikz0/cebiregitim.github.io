@@ -1,0 +1,21 @@
+footer{
+    padding: 50px 50px;
+    justify-content: space-between;
+    display: flex;
+    height: 200px;
+    background-color: rgb(96, 96, 96);
+    color: #000;
+}
+
+footer label{
+    color: white;
+}
+
+
+.contact-container{
+    color: rgba(237, 240, 243, 0.929);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}

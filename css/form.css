@@ -1,0 +1,106 @@
+/* Genel stil */
+/* Genel stil */
+/* Genel stil */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Form kutusu */
+.form-container {
+    margin: 50px;
+    text-align: left;
+    /* Form elemanlarını sola hizala */
+    padding: 20px 40px;
+    border-radius: 8px;
+    width: 70vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        margin: 10px 10px;
+        box-shadow: none;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Başlık */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form grup stili */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    appearance: none;
+    /* Dropdown oku gizler (isteğe bağlı) */
+    background-color: white;
+    /* Input ile aynı arka plan rengi */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Submit butonu */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.header-area {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 200px;
+    width: 100vw;
+    padding-bottom: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/media/backimage.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    background-position: center;
+}

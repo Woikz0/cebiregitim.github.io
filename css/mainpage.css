@@ -1,0 +1,152 @@
+       /* style.css */
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           color: #333;
+           overflow-x: hidden;
+       }
+
+       .header-container {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           background-color: #f8f8f8;
+           padding: 10px 20px;
+       }
+
+       .logo {
+           height: 50px;
+       }
+
+       nav ul {
+           display: flex;
+           list-style: none;
+           margin: 0;
+           padding: 0;
+       }
+
+       nav ul li {
+           margin: 0 15px;
+       }
+
+       nav ul li a {
+           text-decoration: none;
+           color: #333;
+       }
+
+       .btn {
+           background-color: #007BFF;
+           color: white;
+           padding: 10px 15px;
+           border-radius: 5px;
+           text-decoration: none;
+       }
+
+       .hero {
+           text-align: center;
+           background-color: #f4f4f4;
+           padding: 50px 20px;
+           position: relative;
+       }
+
+       .hero h1 {
+           font-size: 36px;
+           margin: 0;
+       }
+
+       .hero h2 {
+           font-size: 28px;
+           color: #007BFF;
+           margin: 10px 0 0;
+       }
+
+       .confetti {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100px;
+           background-image: url('confetti.png');
+           background-size: cover;
+       }
+
+       .achievements {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           padding: 20px;
+       }
+
+       .achievement {
+           background-color: #fff;
+           border: 1px solid #ddd;
+           margin: 10px;
+           padding: 20px;
+           text-align: center;
+           border-radius: 5px;
+           width: 200px;
+           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       .achievement span {
+           display: block;
+           margin-top: 10px;
+           font-weight: bold;
+           color: #007BFF;
+       }
+
+       .main {
+           height: 500px;
+           background-color: #ffffff;
+       }
+
+       .slider-container {
+           width: 100%;
+           height: 500px;
+           border: 2px solid #ccc;
+           border-radius: 10px;
+           background: white;
+       }
+
+       .slider {
+        height: 100%;
+           display: flex;
+           transition: transform 0.5s ease-in-out;
+       }
+
+       .slider img {
+           width: 100%; 
+           height: 100%;
+           flex-shrink: 0;
+           object-fit: cover;
+       }
+
+       .arrow {
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+           background: rgba(0, 0, 0, 0.5);
+           color: white;
+           border: none;
+           border-radius: 50%;
+           width: 40px;
+           height: 40px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           cursor: pointer;
+           z-index: 10;
+       }
+
+       .arrow.left {
+           left: 10px;
+       }
+
+       .arrow.right {
+           right: 10px;
+       }
+
+       .arrow:hover {
+           background: rgba(0, 0, 0, 0.8);
+       }

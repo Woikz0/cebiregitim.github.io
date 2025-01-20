@@ -1,0 +1,30 @@
+  /* Scrollbar Genel Alanı */
+  ::-webkit-scrollbar {
+    position: absolute;
+    background-color: transparent;
+    width: 8px; /* Dikey scrollbar genişliği */
+    height: 12px; /* Yatay scrollbar yüksekliği */
+  }
+  
+  /* Scrollbar Arkaplanı */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Arkaplan rengi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+  }
+  
+  /* Scrollbar Kaydırma Kolu */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffbeae;/* Gradyan renk */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    border: 3px solid #e0e0e0; /* Kenar boşluğu efekti */
+  }
+  
+  /* Kaydırma Kolu Hover Durumu */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Gradyanın ters rengi */
+  }
+  
+  /* Scrollbar'ın köşe alanı (yatay ve dikey çubuk kesişimi) */
+  ::-webkit-scrollbar-corner {
+    background: #e0e0e0;
+  }
